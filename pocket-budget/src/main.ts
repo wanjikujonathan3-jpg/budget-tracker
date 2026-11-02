@@ -52,6 +52,16 @@ function render(): void {
 
   remainingText.textContent = String(remaining);
   dailyText.textContent = daily.toFixed(0);
+  if (remaining < 0) {
+  remainingText.style.color = "red";
+  dailyText.style.color = "red";
+} else {
+  remainingText.style.color = "";
+  dailyText.style.color = "";
+}
+
+
+
 }
 
 // 4. Save the budget
@@ -112,4 +122,7 @@ if (budget.total > 0) {
   totalInput.value = String(budget.total);
   daysInput.value = String(budget.days);
 }
+
+
+
 render();
