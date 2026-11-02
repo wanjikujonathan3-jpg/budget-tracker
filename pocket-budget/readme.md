@@ -25,7 +25,7 @@ Pocket Budget lets you enter the money you have and the days until your next all
 
 ## Screenshots
 
-![Pocket Budget screenshot](screenshot.png)
+![Pocket Budget screenshot](pocket-budget\screenshots)
 
 ## Built with
 
