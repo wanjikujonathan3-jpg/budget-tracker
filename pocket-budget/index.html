@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pocket Budget</title>
+    <style>
+      body { font-family: sans-serif; max-width: 420px; margin: 0 auto; padding: 16px; }
+      section { margin-bottom: 20px; }
+      input, select, button { padding: 8px; margin: 4px 0; width: 100%; box-sizing: border-box; }
+      ul { padding-left: 0; list-style: none; }
+      li { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding: 6px 0; }
+      li button { width: auto; }
+    </style>
+  </head>
+  <body>
+    <h1>Pocket Budget</h1>
+
+    <section>
+      <h2>Setup</h2>
+      <input id="total" type="number" placeholder="Money you have (KES)" />
+      <input id="days" type="number" placeholder="Days until next allowance" />
+      <button id="save-budget">Save</button>
+    </section>
+
+    <section>
+      <p>Remaining: KES <strong id="remaining">0</strong></p>
+      <p>Safe daily spend: KES <strong id="daily">0</strong></p>
+    </section>
+
+    <section>
+      <h2>Add expense</h2>
+      <input id="amount" type="number" placeholder="Amount (KES)" />
+      <select id="category">
+        <option value="food">Food</option>
+        <option value="transport">Transport</option>
+        <option value="airtime">Airtime</option>
+        <option value="other">Other</option>
+      </select>
+      <input id="note" type="text" placeholder="Note (e.g. lunch)" />
+      <button id="add">Add expense</button>
+    </section>
+
+    <section>
+      <h2>Expenses</h2>
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="food">Food</option>
+        <option value="transport">Transport</option>
+        <option value="airtime">Airtime</option>
+        <option value="other">Other</option>
+      </select>
+      <ul id="list"></ul>
+    </section>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
